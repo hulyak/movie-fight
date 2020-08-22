@@ -13,4 +13,9 @@ it ('Shows an autocomplete', () => {
       return movie.Title;
     },
   });
+
+  //dropdown must be closed, remove is-active class
+  const dropdown = document.querySelector ('.dropdown');
+  // assert.strictEquals (dropdown.className, 'dropdown'); use chai
+  expect (dropdown.className).not.to.include ('is-active');
 });
